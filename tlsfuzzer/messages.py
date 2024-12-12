@@ -700,7 +700,7 @@ class ClientHelloGenerator(HandshakeProtocolMessageGenerator):
             self.session_id = bytearray(b'')
 
         if not state.client_random:
-            state.client_random = bytearray(32)
+            state.client_random = bytearray(random.getrandbits(8) for i in range(32))
 
         extensions = None
         if self.extensions is not None:
