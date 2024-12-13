@@ -1,0 +1,6 @@
+test-conversation.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M
+test-tls13-conversation.py
+test-tls13-count-tickets.py
+test-tls13-crfg-curves.py
+test-tls13-dhe-shared-secret-padding.py
+test-tls13-unencrypted-alert.py
