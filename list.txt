@@ -13,9 +13,10 @@ test-tls13-nociphers.py
 test-tls13-pkcs-signature.py
 test-tls13-record-padding.py
 test-tls13-rsa-signatures.py
+test-tls13-session-resumption.py -e 'sanity - TLS 1.2' -e 'use TLS 1.2 ticket in TLS 1.3'
 test-tls13-signature-algorithms.py
 test-tls13-unencrypted-alert.py
 test-tls13-unrecognised-groups.py
+test-tls13-version-negotiation.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M -e 'SSL 2.0 ClientHello with TLS 1.3 version and TLS 1.3 only ciphersuites' -e 'fallback from TLS 1.8 to 1.1' -e 'TLS 1.3 in client hello legacy field' -e 'TLS 1.8 in client hello legacy field'
 test-tls13-zero-content-type.py
 test-tls13-zero-length-data.py
-test-tls13-version-negotiation.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M -e 'SSL 2.0 ClientHello with TLS 1.3 version and TLS 1.3 only ciphersuites' -e 'fallback from TLS 1.8 to 1.1' -e 'TLS 1.3 in client hello legacy field' -e 'TLS 1.8 in client hello legacy field'
