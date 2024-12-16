@@ -2,5 +2,20 @@ test-conversation.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M
 test-tls13-conversation.py
 test-tls13-count-tickets.py
 test-tls13-crfg-curves.py
-test-tls13-dhe-shared-secret-padding.py
+test-tls13-empty-alert.py
+test-tls13-finished-plaintext.py
+test-tls13-finished.py
+test-tls13-hrr.py
+test-tls13-invalid-ciphers.py
+test-tls13-keyshare-omitted.py
+test-tls13-legacy-version.py
+test-tls13-nociphers.py
+test-tls13-pkcs-signature.py
+test-tls13-record-padding.py
+test-tls13-rsa-signatures.py
+test-tls13-signature-algorithms.py
 test-tls13-unencrypted-alert.py
+test-tls13-unrecognised-groups.py
+test-tls13-zero-content-type.py
+test-tls13-zero-length-data.py
+test-tls13-version-negotiation.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M -e 'SSL 2.0 ClientHello with TLS 1.3 version and TLS 1.3 only ciphersuites' -e 'fallback from TLS 1.8 to 1.1' -e 'TLS 1.3 in client hello legacy field' -e 'TLS 1.8 in client hello legacy field'
