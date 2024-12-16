@@ -3,6 +3,7 @@ test-tls13-conversation.py
 test-tls13-count-tickets.py
 test-tls13-crfg-curves.py
 test-tls13-empty-alert.py
+test-tls13-ffdhe-sanity.py
 test-tls13-finished-plaintext.py
 test-tls13-finished.py
 test-tls13-hrr.py
