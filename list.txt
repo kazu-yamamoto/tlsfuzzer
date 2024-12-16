@@ -1,14 +1,19 @@
+test-ccs.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M
 test-conversation.py -C TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 -M
 test-tls13-conversation.py
 test-tls13-count-tickets.py
 test-tls13-crfg-curves.py
+test-tls13-dhe-shared-secret-padding.py
+test-tls13-ecdhe-curves.py
 test-tls13-empty-alert.py
+test-tls13-ffdhe-groups.py
 test-tls13-ffdhe-sanity.py
 test-tls13-finished-plaintext.py
 test-tls13-finished.py
 test-tls13-hrr.py
 test-tls13-invalid-ciphers.py
 test-tls13-keyshare-omitted.py
+test-tls13-large-number-of-extensions.py --supgroup
 test-tls13-legacy-version.py
 test-tls13-nociphers.py
 test-tls13-pkcs-signature.py
