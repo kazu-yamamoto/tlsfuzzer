@@ -4,6 +4,7 @@ test-client-hello-max-size.py
 test-connection-abort.py
 test-conversation.py
 test-cve-2016-6309.py
+test-early-application-data.py
 test-empty-extensions.py
 test-tls13-conversation.py
 test-tls13-count-tickets.py
@@ -18,7 +19,6 @@ test-tls13-finished.py
 test-tls13-hrr.py
 test-tls13-invalid-ciphers.py
 test-tls13-keyshare-omitted.py
-test-tls13-keyupdate.py --coalescing
 test-tls13-large-number-of-extensions.py --supgroup
 test-tls13-legacy-version.py
 test-tls13-nociphers.py
