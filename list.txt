@@ -8,6 +8,7 @@ test-conversation.py
 test-cve-2016-6309.py
 test-early-application-data.py
 test-empty-extensions.py
+test-extensions.py
 test-record-layer-fragmentation.py
 test-tls13-conversation.py
 test-tls13-count-tickets.py
