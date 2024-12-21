@@ -1,3 +1,5 @@
+test-TLSv1_2-rejected-without-TLSv1_2.py -e 'sanity - TLS 1.1 enabled'
+test-aes-gcm-nonces.py
 test-bleichenbacher-timing-pregenerate.py
 test-ccs.py
 test-client-hello-max-size.py
