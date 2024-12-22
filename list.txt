@@ -25,6 +25,8 @@ test-invalid-client-hello.py
 test-invalid-compression-methods.py
 test-invalid-content-type.py
 test-invalid-rsa-key-exchange-messages.py
+test-invalid-server-name-extension-resumption.py -e 'Sanity check, bad SNI' -e 'session resume with malformed SNI'
+test-invalid-session-id.py
 test-invalid-version.py
 test-large-hello.py
 test-large-number-of-extensions.py
