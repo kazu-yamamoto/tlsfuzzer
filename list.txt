@@ -22,6 +22,7 @@ test-hello-request-by-client.py
 test-invalid-cipher-suites.py
 test-invalid-client-hello-w-record-overflow.py
 test-invalid-client-hello.py
+test-invalid-compression-methods.py
 test-invalid-content-type.py
 test-invalid-rsa-key-exchange-messages.py
 test-invalid-version.py
