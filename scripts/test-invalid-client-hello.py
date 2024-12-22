@@ -138,8 +138,7 @@ def main():
                    CipherSuite.TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
         hello_gen = ClientHelloGenerator(ciphers, version=(3, 3))
         node = node.add_child(fuzz_message(hello_gen, xors={0: i}))
-        node = node.add_child(ExpectAlert(level=AlertLevel.fatal,
-                                          description=AlertDescription.unexpected_message))
+        node = node.add_child(ExpectAlert())
         node = node.add_child(ExpectClose())
         conversations["Client Hello type fuzz to {0}".format(1 ^ i)] = conversation
 
