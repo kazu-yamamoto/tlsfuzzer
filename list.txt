@@ -5,6 +5,7 @@ test-ccs.py
 test-client-hello-max-size.py
 test-connection-abort.py
 test-conversation.py
+test-cve-2016-2107.py
 test-cve-2016-6309.py
 test-early-application-data.py
 test-empty-extensions.py
