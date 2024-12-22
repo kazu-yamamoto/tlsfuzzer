@@ -14,6 +14,19 @@ test-empty-extensions.py
 test-export-ciphers-rejected.py --min-ver TLSv1.2
 test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1' -e 'extended master secret w/DHE'
 test-extensions.py
+test-fuzzed-MAC.py
+test-fuzzed-ciphertext.py
+test-fuzzed-finished.py
+test-fuzzed-padding.py
+test-hello-request-by-client.py
+test-invalid-cipher-suites.py
+test-invalid-client-hello-w-record-overflow.py
+test-invalid-client-hello.py
+test-invalid-content-type.py
+test-invalid-rsa-key-exchange-messages.py
+test-invalid-version.py
+test-large-hello.py
+test-large-number-of-extensions.py
 test-record-layer-fragmentation.py
 test-tls13-conversation.py
 test-tls13-count-tickets.py
