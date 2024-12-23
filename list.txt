@@ -10,6 +10,10 @@ test-cve-2016-6309.py
 test-cve-2016-7054.py
 test-downgrade-protection.py -e 'TLS 1.3 downgrade check for Protocol (3, 1)' -e 'TLS 1.3 downgrade check for Protocol (3, 2)'
 test-early-application-data.py
+test-ecdhe-padded-shared-secret.py
+test-ecdhe-rsa-key-exchange-with-bad-messages.py
+test-ecdhe-rsa-key-exchange.py -e 'ECDHE w/o extension'
+test-ecdhe-rsa-key-share-random.py
 test-empty-extensions.py
 test-export-ciphers-rejected.py --min-ver TLSv1.2
 test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1' -e 'extended master secret w/DHE'
