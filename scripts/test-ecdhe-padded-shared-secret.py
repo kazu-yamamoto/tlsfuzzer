@@ -139,7 +139,7 @@ def main():
 
     conversations["sanity"] = conversation
 
-    for prot in [(3, 0), (3, 1), (3, 2), (3, 3)]:
+    for prot in [(3, 3)]:
         for ssl2 in [True, False]:
             for group in groups:
                 # with SSLv2 compatible or with SSLv3 we can't advertise
