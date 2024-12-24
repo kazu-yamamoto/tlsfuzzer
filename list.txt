@@ -22,6 +22,7 @@ test-fuzzed-MAC.py
 test-fuzzed-ciphertext.py
 test-fuzzed-finished.py
 test-fuzzed-padding.py
+test-fuzzed-plaintext.py
 test-hello-request-by-client.py
 test-invalid-cipher-suites.py
 test-invalid-client-hello-w-record-overflow.py
