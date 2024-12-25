@@ -35,6 +35,7 @@ test-invalid-session-id.py
 test-invalid-version.py
 test-large-hello.py
 test-large-number-of-extensions.py
+test-message-duplication.py
 test-record-layer-fragmentation.py
 test-tls13-conversation.py
 test-tls13-count-tickets.py
