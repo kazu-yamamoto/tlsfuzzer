@@ -40,6 +40,7 @@ test-large-number-of-extensions.py
 test-message-duplication.py
 test-record-layer-fragmentation.py
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
+test-serverhello-random.py
 test-tls13-conversation.py
 test-tls13-count-tickets.py
 test-tls13-crfg-curves.py
