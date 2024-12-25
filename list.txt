@@ -24,6 +24,8 @@ test-fuzzed-finished.py
 test-fuzzed-padding.py
 test-fuzzed-plaintext.py
 test-hello-request-by-client.py
+test-interleaved-application-data-and-fragmented-handshakes-in-renegotiation.py -e 'Application data inside Client Key Exchange'
+test-interleaved-application-data-in-renegotiation.py -e 'Application data before Change Cipher Spec' -e 'Application data before Client Key Exchange'
 test-invalid-cipher-suites.py
 test-invalid-client-hello-w-record-overflow.py
 test-invalid-client-hello.py
@@ -37,6 +39,7 @@ test-large-hello.py
 test-large-number-of-extensions.py
 test-message-duplication.py
 test-record-layer-fragmentation.py
+test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-tls13-conversation.py
 test-tls13-count-tickets.py
 test-tls13-crfg-curves.py
