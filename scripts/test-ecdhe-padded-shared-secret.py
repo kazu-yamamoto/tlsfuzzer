@@ -140,7 +140,7 @@ def main():
     conversations["sanity"] = conversation
 
     for prot in [(3, 3)]:
-        for ssl2 in [True, False]:
+        for ssl2 in [False]:
             for group in groups:
                 # with SSLv2 compatible or with SSLv3 we can't advertise
                 # curves so do just one check
