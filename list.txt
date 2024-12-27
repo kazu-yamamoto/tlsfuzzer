@@ -18,6 +18,7 @@ test-empty-extensions.py
 test-export-ciphers-rejected.py --min-ver TLSv1.2
 test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1' -e 'extended master secret w/DHE'
 test-extensions.py
+test-ffdhe-negotiation.py -e 'sanity' -e 'no overlap between groups' -e 'Check if DHE preferred'
 test-fuzzed-MAC.py
 test-fuzzed-ciphertext.py
 test-fuzzed-finished.py
@@ -39,6 +40,7 @@ test-large-hello.py
 test-large-number-of-extensions.py
 test-message-duplication.py
 test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_failure -x 'skip all but Finished in TLS 1.2' -X handshake_failure -e 'skip all but Finished in SSLv3' -e 'skip all but Finished in TLS 1.0' -e 'skip all but Finished in TLS 1.1' -x 'skip Client Hello' -X decode_error
+test-openssl-3712.py -e 'weaved app data and handshake proto'
 test-record-layer-fragmentation.py
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
