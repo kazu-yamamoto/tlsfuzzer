@@ -404,7 +404,7 @@ def main():
     node = node.add_child(ClientHelloGenerator(ciphers,
                                                extensions=ext))
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.decode_error))
+                                      AlertDescription.handshake_failure))
     node = node.add_child(ExpectClose())
     conversations["empty sigalgs"] = conversation
 
