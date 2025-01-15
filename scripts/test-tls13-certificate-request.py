@@ -93,24 +93,19 @@ def main():
     ext_spec = {'CH': None, 'SH': None, 'EE': None, 'CT': None, 'CR': None,
                 'NST': None, 'HRR': None}
 
-    sigalgs = [SignatureScheme.ed25519,
-               SignatureScheme.ed448,
+    sigalgs = [SignatureScheme.ed448,
+               SignatureScheme.ed25519,
                SignatureScheme.ecdsa_secp521r1_sha512,
                SignatureScheme.ecdsa_secp384r1_sha384,
                SignatureScheme.ecdsa_secp256r1_sha256,
-               (HashAlgorithm.sha224, SignatureAlgorithm.ecdsa),
-               (HashAlgorithm.sha1, SignatureAlgorithm.ecdsa),
                SignatureScheme.rsa_pss_rsae_sha512,
-               SignatureScheme.rsa_pss_pss_sha512,
                SignatureScheme.rsa_pss_rsae_sha384,
-               SignatureScheme.rsa_pss_pss_sha384,
                SignatureScheme.rsa_pss_rsae_sha256,
-               SignatureScheme.rsa_pss_pss_sha256,
                SignatureScheme.rsa_pkcs1_sha512,
                SignatureScheme.rsa_pkcs1_sha384,
                SignatureScheme.rsa_pkcs1_sha256,
-               SignatureScheme.rsa_pkcs1_sha224,
-               SignatureScheme.rsa_pkcs1_sha1]
+               SignatureScheme.rsa_pkcs1_sha1,
+               (HashAlgorithm.sha1, SignatureAlgorithm.ecdsa)]
 
     argv = sys.argv[1:]
     opts, args = getopt.getopt(argv, "h:p:e:x:X:s:k:c:E:", ["help"])
