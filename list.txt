@@ -41,11 +41,13 @@ test-large-number-of-extensions.py
 test-lengths.py -n 50 -C TLS_RSA_WITH_AES_128_CBC_SHA
 test-message-duplication.py
 test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_failure -x 'skip all but Finished in TLS 1.2' -X handshake_failure -e 'skip all but Finished in SSLv3' -e 'skip all but Finished in TLS 1.0' -e 'skip all but Finished in TLS 1.1' -x 'skip Client Hello' -X decode_error
+test-no-heartbeat.py
 test-openssl-3712.py -e 'weaved app data and handshake proto'
 test-record-layer-fragmentation.py
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
 test-sessionID-resumption.py
+test-signature-algorithms.py
 test-tls13-ccs.py
 test-tls13-connection-abort.py 'After NewSessionTicket'
 test-tls13-conversation.py
