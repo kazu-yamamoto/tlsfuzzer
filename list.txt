@@ -18,6 +18,7 @@ test-empty-extensions.py
 test-export-ciphers-rejected.py --min-ver TLSv1.2
 test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1' -e 'extended master secret w/DHE'
 test-extensions.py
+test-ffdhe-negotiation.py -e 'fallback to non-ffdhe' -e 'fallback to non-ffdhe with secp256r1 advertised' -e 'no overlap between groups'
 test-ffdhe-negotiation.py -e 'sanity' -e 'no overlap between groups' -e 'Check if DHE preferred'
 test-fuzzed-MAC.py
 test-fuzzed-ciphertext.py
