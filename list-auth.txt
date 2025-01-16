@@ -4,3 +4,4 @@ test-certificate-verify.py
 test-rsa-pss-sigs-on-certificate-verify.py
 test-rsa-sigs-on-certificate-verify.py
 test-tls13-certificate-request.py
+test-tls13-certificate-verify.py
