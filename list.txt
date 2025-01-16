@@ -48,6 +48,7 @@ test-record-layer-fragmentation.py
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
 test-sessionID-resumption.py
+test-sig-algs.py -e 'rsa_pss_pss_sha256 only' -e 'rsa_pss_pss_sha384 only' -e 'rsa_pss_pss_sha512 only'
 test-signature-algorithms.py
 test-tls13-ccs.py
 test-tls13-connection-abort.py 'After NewSessionTicket'
