@@ -45,6 +45,7 @@ test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_fail
 test-no-heartbeat.py
 test-openssl-3712.py -e 'weaved app data and handshake proto'
 test-record-layer-fragmentation.py
+test-renegotiation-changed-clienthello.py -e 'drop extended_master_secret in renegotiation'
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
 test-sessionID-resumption.py
