@@ -1,0 +1,6 @@
+test-certificate-verify-malformed-sig.py
+test-certificate-verify-malformed.py
+test-certificate-verify.py
+test-rsa-pss-sigs-on-certificate-verify.py
+test-rsa-sigs-on-certificate-verify.py
+test-tls13-certificate-request.py
