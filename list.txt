@@ -67,6 +67,7 @@ test-tls13-hrr.py
 test-tls13-invalid-ciphers.py
 test-tls13-keyshare-omitted.py
 test-tls13-keyupdate-from-server.py
+test-tls13-keyupdate.py
 test-tls13-large-number-of-extensions.py --supgroup
 test-tls13-legacy-version.py
 test-tls13-lengths.py -n 50
