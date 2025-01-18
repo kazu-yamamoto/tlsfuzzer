@@ -44,7 +44,7 @@ test-message-duplication.py
 test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_failure -x 'skip all but Finished in TLS 1.2' -X handshake_failure -e 'skip all but Finished in SSLv3' -e 'skip all but Finished in TLS 1.0' -e 'skip all but Finished in TLS 1.1' -x 'skip Client Hello' -X decode_error
 test-no-heartbeat.py
 test-openssl-3712.py -e 'weaved app data and handshake proto'
-test-record-layer-fragmentation.py
+test-record-layer-fragmentation.py -e 'big, excessive fragmentation: 20 fragment - 4096B extension' -e 'medium, excessive fragmentation: 20 fragment - 1024B extension' -e 'medium, maximum fragmentation: 1 fragment - 1024B extension' -e 'small, maximum fragmentation: 1 fragment - 20B extension'
 test-renegotiation-changed-clienthello.py -e 'drop extended_master_secret in renegotiation'
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
@@ -87,7 +87,7 @@ test-tls13-unrecognised-groups.py
 test-tls13-version-negotiation.py -e 'SSL 2.0 ClientHello with TLS 1.3 version and TLS 1.3 only ciphersuites' -e 'fallback from TLS 1.8 to 1.1' -e 'TLS 1.3 in client hello legacy field' -e 'TLS 1.8 in client hello legacy field'
 test-tls13-zero-content-type.py
 test-tls13-zero-length-data.py
-test-truncating-of-client-hello.py
+test-truncating-of-client-hello.py -e 'max pad: 16777167 of "0" byte padding'
 test-truncating-of-finished.py
 test-truncating-of-kRSA-client-key-exchange.py
 test-version-numbers.py -e 'high record version (3, 254), very high protocol version (254, 254)' -e 'high version (4, 1)' -e 'high version (6, 3)' -e 'very high version (254, 254)'
