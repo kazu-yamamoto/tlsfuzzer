@@ -3,5 +3,5 @@ test-certificate-verify-malformed.py
 test-certificate-verify.py
 test-rsa-pss-sigs-on-certificate-verify.py
 test-rsa-sigs-on-certificate-verify.py
-test-tls13-certificate-request.py
+test-tls13-certificate-request.py -E compress_certificate:CR,key_share:SH,supported_versions:SH,supported_groups:EE
 test-tls13-certificate-verify.py
