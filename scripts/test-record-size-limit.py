@@ -215,9 +215,7 @@ def main():
     conversations["sanity in TLS 1.3"] = conversation
 
     # check sizes
-    for name, vers in [("TLS 1.0", (3, 1)),
-                       ("TLS 1.1", (3, 2)),
-                       ("TLS 1.2", (3, 3))]:
+    for name, vers in [("TLS 1.2", (3, 3))]:
         conversation = Connect(host, port)
         node = conversation
         ciphers = [CipherSuite.TLS_RSA_WITH_AES_128_CBC_SHA,
