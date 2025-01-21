@@ -45,6 +45,7 @@ test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_fail
 test-no-heartbeat.py
 test-openssl-3712.py -e 'weaved app data and handshake proto'
 test-record-layer-fragmentation.py -e 'big, excessive fragmentation: 20 fragment - 4096B extension' -e 'medium, excessive fragmentation: 20 fragment - 1024B extension' -e 'medium, maximum fragmentation: 1 fragment - 1024B extension' -e 'small, maximum fragmentation: 1 fragment - 20B extension'
+test-record-size-limit.py --reply-AD-size 103 -e 'added extension in 2nd CH in HRR handshake' -e 'check interaction with sha256 prf' -e 'modified extension in 2nd CH in HRR handshake' -e 'removed extension in 2nd CH in HRR handshake' -e 'renegotiation with dropped extension'
 test-renegotiation-changed-clienthello.py -e 'drop extended_master_secret in renegotiation'
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
