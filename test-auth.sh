@@ -9,7 +9,7 @@ do
   r=$?
   if [ $r -ne 0 ]; then
     echo "FAIL!"
-    echo "PYTHONPATH=. python3 scripts/$i"
+    echo "PYTHONPATH=. python3 scripts/$i -k ~/http/clientkey.pem -c ~/http/clientcert.pem"
     exit 1
   fi
   echo "$i...done"
