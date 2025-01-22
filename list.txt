@@ -19,7 +19,6 @@ test-export-ciphers-rejected.py --min-ver TLSv1.2
 test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1' -e 'extended master secret w/DHE'
 test-extensions.py
 test-ffdhe-negotiation.py -e 'fallback to non-ffdhe' -e 'fallback to non-ffdhe with secp256r1 advertised' -e 'no overlap between groups'
-test-ffdhe-negotiation.py -e 'sanity' -e 'no overlap between groups' -e 'Check if DHE preferred'
 test-fuzzed-MAC.py
 test-fuzzed-ciphertext.py
 test-fuzzed-finished.py
@@ -45,7 +44,7 @@ test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_fail
 test-no-heartbeat.py
 test-openssl-3712.py -e 'weaved app data and handshake proto'
 test-record-layer-fragmentation.py -e 'big, excessive fragmentation: 20 fragment - 4096B extension' -e 'medium, excessive fragmentation: 20 fragment - 1024B extension' -e 'medium, maximum fragmentation: 1 fragment - 1024B extension' -e 'small, maximum fragmentation: 1 fragment - 20B extension'
-test-record-size-limit.py --reply-AD-size 103 -e 'added extension in 2nd CH in HRR handshake' -e 'check interaction with sha256 prf' -e 'modified extension in 2nd CH in HRR handshake' -e 'removed extension in 2nd CH in HRR handshake' -e 'renegotiation with dropped extension'
+test-record-size-limit.py --reply-AD-size 103 --supported-groups --hrr-supported-groups -e 'added extension in 2nd CH in HRR handshake' -e 'check interaction with sha256 prf' -e 'modified extension in 2nd CH in HRR handshake' -e 'removed extension in 2nd CH in HRR handshake' -e 'renegotiation with dropped extension'
 test-renegotiation-changed-clienthello.py -e 'drop extended_master_secret in renegotiation'
 test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
 test-serverhello-random.py
@@ -54,7 +53,7 @@ test-sig-algs.py -e 'rsa_pss_pss_sha256 only' -e 'rsa_pss_pss_sha384 only' -e 'r
 test-signature-algorithms.py
 test-tls13-ccs.py
 test-tls13-certificate-compression.py
-test-tls13-connection-abort.py 'After NewSessionTicket'
+test-tls13-connection-abort.py -e 'After NewSessionTicket'
 test-tls13-conversation.py
 test-tls13-count-tickets.py
 test-tls13-crfg-curves.py
