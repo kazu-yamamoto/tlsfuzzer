@@ -531,7 +531,7 @@ def expected_ext_parser(names):
            'NST': [],
            'HRR': []}
 
-    for ext_spec in names.split(','):
+    for ext_spec in names.split():
         params = ext_spec.split(':')
         if len(params) < 2:
             raise ValueError("Invalid message specification for extension: "
