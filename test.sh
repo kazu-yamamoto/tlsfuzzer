@@ -5,7 +5,7 @@ for i in $files
 do
   IFS=$OLDIFS
   echo "$i..."
-  PYTHONPATH=. python3 scripts/$i 1> /dev/null 2>&1
+  eval "PYTHONPATH=. python3 scripts/$i 1> /dev/null 2>&1"
   r=$?
   if [ $r -ne 0 ]; then
     echo "FAIL!"
