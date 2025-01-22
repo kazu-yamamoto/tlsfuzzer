@@ -164,7 +164,7 @@ def main():
     unassigned_ext_id.extend(range(2, 5))
     unassigned_ext_id.extend(range(6, 10))
     unassigned_ext_id.extend([11, 12, 17])
-    unassigned_ext_id.extend(range(22, 28))
+    unassigned_ext_id.extend(range(22, 26))
     unassigned_ext_id.extend(range(29, 41))
     unassigned_ext_id.extend([46])
     unassigned_ext_id.extend(range(52, 57))
