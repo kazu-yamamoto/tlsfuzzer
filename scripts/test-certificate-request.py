@@ -78,26 +78,26 @@ def main():
     private_key = None
     ems = False
 
-    sigalgs = [SignatureScheme.ed25519,
-               SignatureScheme.ed448,
+    sigalgs = [SignatureScheme.ed448,
+               SignatureScheme.ed25519,
                SignatureScheme.ecdsa_secp521r1_sha512,
                SignatureScheme.ecdsa_secp384r1_sha384,
                SignatureScheme.ecdsa_secp256r1_sha256,
-               (HashAlgorithm.sha224, SignatureAlgorithm.ecdsa),
-               (HashAlgorithm.sha1, SignatureAlgorithm.ecdsa),
                SignatureScheme.rsa_pss_rsae_sha512,
-               SignatureScheme.rsa_pss_pss_sha512,
                SignatureScheme.rsa_pss_rsae_sha384,
-               SignatureScheme.rsa_pss_pss_sha384,
                SignatureScheme.rsa_pss_rsae_sha256,
+               SignatureScheme.rsa_pss_pss_sha512,
+               SignatureScheme.rsa_pss_pss_sha384,
                SignatureScheme.rsa_pss_pss_sha256,
-               (HashAlgorithm.sha512, SignatureAlgorithm.rsa),
-               (HashAlgorithm.sha384, SignatureAlgorithm.rsa),
-               (HashAlgorithm.sha256, SignatureAlgorithm.rsa),
-               (HashAlgorithm.sha224, SignatureAlgorithm.rsa),
-               (HashAlgorithm.sha1, SignatureAlgorithm.rsa)]
-    cert_types = [ClientCertificateType.rsa_sign,
-                  ClientCertificateType.ecdsa_sign]
+               SignatureScheme.rsa_pkcs1_sha512,
+               SignatureScheme.rsa_pkcs1_sha384,
+               SignatureScheme.rsa_pkcs1_sha256,
+               SignatureScheme.rsa_pkcs1_sha1,
+               (HashAlgorithm.sha1, SignatureAlgorithm.ecdsa)]
+    cert_types = [255,
+                  254,
+                  ClientCertificateType.ecdsa_sign,
+                  ClientCertificateType.rsa_sign]
 
     argv = sys.argv[1:]
     opts, args = getopt.getopt(argv, "h:p:e:x:X:s:k:c:T:dMn:", ["help", "ems"])
@@ -199,8 +199,9 @@ def main():
         node = node.add_child(ExpectServerKeyExchange())
     node = node.add_child(ExpectCertificateRequest())
     node = node.add_child(ExpectServerHelloDone())
-    node = node.add_child(CertificateGenerator())
+    node = node.add_child(CertificateGenerator(X509CertChain([cert])))
     node = node.add_child(ClientKeyExchangeGenerator())
+    node = node.add_child(CertificateVerifyGenerator(private_key))
     node = node.add_child(ChangeCipherSpecGenerator())
     node = node.add_child(FinishedGenerator())
     node = node.add_child(ExpectChangeCipherSpec())
@@ -307,8 +308,9 @@ def main():
         node = node.add_child(ExpectServerKeyExchange())
     node = node.add_child(ExpectCertificateRequest(sigalgs))
     node = node.add_child(ExpectServerHelloDone())
-    node = node.add_child(CertificateGenerator())
+    node = node.add_child(CertificateGenerator(X509CertChain([cert])))
     node = node.add_child(ClientKeyExchangeGenerator())
+    node = node.add_child(CertificateVerifyGenerator(private_key))
     node = node.add_child(ChangeCipherSpecGenerator())
     node = node.add_child(FinishedGenerator())
     node = node.add_child(ExpectChangeCipherSpec())
@@ -360,8 +362,9 @@ def main():
         node = node.add_child(ExpectServerKeyExchange())
     node = node.add_child(ExpectCertificateRequest(cert_types=cert_types))
     node = node.add_child(ExpectServerHelloDone())
-    node = node.add_child(CertificateGenerator())
+    node = node.add_child(CertificateGenerator(X509CertChain([cert])))
     node = node.add_child(ClientKeyExchangeGenerator())
+    node = node.add_child(CertificateVerifyGenerator(private_key))
     node = node.add_child(ChangeCipherSpecGenerator())
     node = node.add_child(FinishedGenerator())
     node = node.add_child(ExpectChangeCipherSpec())
