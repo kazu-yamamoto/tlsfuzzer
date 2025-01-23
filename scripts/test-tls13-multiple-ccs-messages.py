@@ -328,7 +328,7 @@ def main():
     node = node.add_child(ExpectCertificateVerify())
     node = node.add_child(ExpectFinished())
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                          AlertDescription.unexpected_message))
+                          AlertDescription.decode_error))
     node = node.add_child(ExpectClose())
     conversations["multiple CCS Messages in one TLS record"] = conversation
 
