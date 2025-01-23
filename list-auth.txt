@@ -1,3 +1,4 @@
+test-certificate-malformed.py -k ~/http/clientkey.pem -c ~/http/clientcert.pem -e 'sanity - no client cert' -e 'fuzz empty certificate - overall 8, certs 5, cert 2' -e 'fuzz empty certificate - overall 7, certs 4, cert 1'
 test-certificate-verify-malformed-sig.py
 test-certificate-verify-malformed.py
 test-certificate-verify.py
