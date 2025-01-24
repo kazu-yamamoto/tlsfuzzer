@@ -52,6 +52,7 @@ test-sessionID-resumption.py
 test-sig-algs-renegotiation-resumption.py --ems --sig-algs-drop-ok
 test-sig-algs.py -e 'rsa_pss_pss_sha256 only' -e 'rsa_pss_pss_sha384 only' -e 'rsa_pss_pss_sha512 only'
 test-signature-algorithms.py
+test-tls13-0rtt-garbage.py -e 'undecryptable record later in handshake together with early_data'
 test-tls13-ccs.py
 test-tls13-certificate-compression.py
 test-tls13-connection-abort.py -e 'After NewSessionTicket'
