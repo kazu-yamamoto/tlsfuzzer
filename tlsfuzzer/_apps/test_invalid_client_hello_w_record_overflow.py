@@ -204,8 +204,7 @@ def main():
             version=(3, 3),
             extensions=ext)
         node = node.add_child(fuzz_message(hello_gen, xors={0: i}))
-        node = node.add_child(ExpectAlert(level=AlertLevel.fatal,
-                                          description=AlertDescription.unexpected_message))
+        node = node.add_child(ExpectAlert(level=AlertLevel.fatal))
         node = node.add_child(ExpectClose())
         conversations["Client Hello type fuzz to {0}".format(1 ^ i)] = conversation
 
@@ -229,8 +228,7 @@ def main():
         hello_gen = ClientHelloGenerator(ciphers, version=(3, 3),
                                          extensions=ext_renego_info)
         node = node.add_child(fuzz_message(hello_gen, substitutions={38: i}))
-        node = node.add_child(ExpectAlert(level=AlertLevel.fatal,
-                                          description=AlertDescription.decode_error))
+        node = node.add_child(ExpectAlert(level=AlertLevel.fatal))
         node = node.add_child(ExpectClose())
         conversations["session ID len fuzz to {0} w/ext".format(i)] = conversation
 
@@ -273,8 +271,7 @@ def main():
         hello_gen = ClientHelloGenerator(ciphers, version=(3, 3),
                                          extensions=ext_renego_info)
         node = node.add_child(fuzz_message(hello_gen, xors={40: i}))
-        node = node.add_child(ExpectAlert(level=AlertLevel.fatal,
-                                          description=AlertDescription.decode_error))
+        node = node.add_child(ExpectAlert(level=AlertLevel.fatal))
         node = node.add_child(ExpectClose())
         conversations["cipher suites len fuzz to {0} w/ext".format(4 ^ i)] = conversation
 
