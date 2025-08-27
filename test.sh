@@ -8,11 +8,11 @@ do
   IFS=$OLDIFS
   echo "$i..."
   if ! eval "PYTHONPATH=. python3 scripts/$i 1> /dev/null 2>&1"; then
-    echo "FAIL!"
+    printf '\033[31m%s\033[m\n' 'FAIL!'
     echo "PYTHONPATH=. python3 scripts/$i"
     exit 1
   fi
   echo "$i...done"
   IFS=$'\n'
 done
-echo "PASS"
+printf '\033[32m%s\033[m\n' 'PASS!'
