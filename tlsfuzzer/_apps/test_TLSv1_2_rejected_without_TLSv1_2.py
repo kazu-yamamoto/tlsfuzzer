@@ -154,7 +154,7 @@ def main():
                                                    extensions={ExtensionType.
                                                        renegotiation_info:None}))
         node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                          AlertDescription.handshake_failure))
+                                          AlertDescription.protocol_version))
         node.add_child(ExpectClose())
 
         conversations[CipherSuite.ietfNames[cipher] + " in TLSv1.1"] =\
