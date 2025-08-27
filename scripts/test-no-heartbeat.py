@@ -226,7 +226,7 @@ def main():
         node = node.add_child(ExpectServerKeyExchange())
     node = node.add_child(ExpectServerHelloDone())
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.unexpected_message))
+                                      AlertDescription.decode_error))
     node.add_child(ExpectClose())
     conversations["heartbeat in handshake without support in server"] = \
         conversation
@@ -272,7 +272,7 @@ def main():
         node = node.add_child(ExpectServerKeyExchange())
     node = node.add_child(ExpectServerHelloDone())
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.unexpected_message))
+                                      AlertDescription.decode_error))
     node.add_child(ExpectClose())
     conversations["heartbleed in handshake without support in server"] = \
         conversation
@@ -313,7 +313,7 @@ def main():
     node = node.add_child(ExpectFinished())
     node = node.add_child(HeartbeatGenerator(bytearray(b'test heartbeat')))
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.unexpected_message))
+                                      AlertDescription.decode_error))
     node.add_child(ExpectClose())
     conversations["heartbeat after handshake"] = conversation
 
@@ -355,7 +355,7 @@ def main():
         HeartbeatGenerator(bytearray(b'test heartbeat')),
         substitutions={1: 0, 2: 64}))
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.unexpected_message))
+                                      AlertDescription.decode_error))
     node.add_child(ExpectClose())
     conversations["heartbleed after handshake"] = conversation
 

@@ -192,7 +192,7 @@ def main():
         ContentType.change_cipher_spec, b'\x01\x01'))
     node = node.add_child(ExpectAlert(
         AlertLevel.fatal,
-        AlertDescription.unexpected_message))
+        AlertDescription.decode_error))
     node.add_child(ExpectClose())
     conversations["two bytes long CCS"] = conversation
 

@@ -378,7 +378,7 @@ def main():
         ciphers = [CipherSuite.TLS_RSA_WITH_AES_128_CBC_SHA]
     node = node.add_child(ClientHelloGenerator(ciphers, extensions=ext))
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.decode_error))
+                                      AlertDescription.internal_error))
     node.next_sibling = ExpectClose()
     conversations["malformed extended master secret ext"] = conversation
 

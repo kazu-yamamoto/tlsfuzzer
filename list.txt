@@ -1,0 +1,99 @@
+test-TLSv1_2-rejected-without-TLSv1_2.py -e 'sanity - TLS 1.1 enabled'
+test-aes-gcm-nonces.py
+test-bleichenbacher-timing-pregenerate.py
+test-ccs.py
+test-client-hello-max-size.py
+test-connection-abort.py
+test-conversation.py
+test-cve-2016-2107.py
+test-cve-2016-6309.py
+test-cve-2016-7054.py
+test-downgrade-protection.py -e 'TLS 1.3 downgrade check for Protocol (3, 1)' -e 'TLS 1.3 downgrade check for Protocol (3, 2)'
+test-early-application-data.py
+test-ecdhe-padded-shared-secret.py
+test-ecdhe-rsa-key-exchange-with-bad-messages.py
+test-ecdhe-rsa-key-exchange.py -e 'ECDHE w/o extension'
+test-ecdhe-rsa-key-share-random.py
+test-empty-extensions.py
+test-export-ciphers-rejected.py --min-ver TLSv1.2
+test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1' -e 'extended master secret w/DHE'
+test-extensions.py
+test-ffdhe-negotiation.py -e 'fallback to non-ffdhe' -e 'fallback to non-ffdhe with secp256r1 advertised' -e 'no overlap between groups'
+test-fuzzed-MAC.py
+test-fuzzed-ciphertext.py
+test-fuzzed-finished.py
+test-fuzzed-padding.py
+test-fuzzed-plaintext.py
+test-hello-request-by-client.py
+test-interleaved-application-data-and-fragmented-handshakes-in-renegotiation.py -e 'Application data inside Client Key Exchange'
+test-interleaved-application-data-in-renegotiation.py -e 'Application data before Change Cipher Spec' -e 'Application data before Client Key Exchange'
+test-invalid-cipher-suites.py
+test-invalid-client-hello-w-record-overflow.py
+test-invalid-client-hello.py
+test-invalid-compression-methods.py
+test-invalid-content-type.py
+test-invalid-rsa-key-exchange-messages.py
+test-invalid-server-name-extension-resumption.py -e 'Sanity check, bad SNI' -e 'session resume with malformed SNI'
+test-invalid-session-id.py
+test-invalid-version.py
+test-large-hello.py
+test-large-number-of-extensions.py
+test-lengths.py -n 50 -C TLS_RSA_WITH_AES_128_CBC_SHA
+test-message-duplication.py
+test-message-skipping.py -x 'skip all but Finished in TLS 1.3' -X handshake_failure -x 'skip all but Finished in TLS 1.2' -X handshake_failure -e 'skip all but Finished in SSLv3' -e 'skip all but Finished in TLS 1.0' -e 'skip all but Finished in TLS 1.1' -x 'skip Client Hello' -X decode_error
+test-no-heartbeat.py
+test-openssl-3712.py -e 'weaved app data and handshake proto'
+test-record-layer-fragmentation.py -e 'big, excessive fragmentation: 20 fragment - 4096B extension' -e 'medium, excessive fragmentation: 20 fragment - 1024B extension' -e 'medium, maximum fragmentation: 1 fragment - 1024B extension' -e 'small, maximum fragmentation: 1 fragment - 20B extension'
+test-record-size-limit.py --reply-AD-size 103 --supported-groups --hrr-supported-groups -e 'added extension in 2nd CH in HRR handshake' -e 'check interaction with sha256 prf' -e 'modified extension in 2nd CH in HRR handshake' -e 'removed extension in 2nd CH in HRR handshake' -e 'renegotiation with dropped extension'
+test-renegotiation-changed-clienthello.py -e 'drop extended_master_secret in renegotiation'
+test-resumption-with-wrong-ciphers.py -x 'resumption of safe session with NULL cipher' -X handshake_failure
+test-serverhello-random.py
+test-sessionID-resumption.py
+test-sig-algs-renegotiation-resumption.py --ems --sig-algs-drop-ok
+test-sig-algs.py -e 'rsa_pss_pss_sha256 only' -e 'rsa_pss_pss_sha384 only' -e 'rsa_pss_pss_sha512 only'
+test-signature-algorithms.py
+test-tls13-0rtt-garbage.py -e 'undecryptable record later in handshake together with early_data'
+test-tls13-ccs.py
+test-tls13-certificate-compression.py
+test-tls13-connection-abort.py -e 'After NewSessionTicket'
+test-tls13-conversation.py
+test-tls13-count-tickets.py
+test-tls13-crfg-curves.py
+test-tls13-dhe-shared-secret-padding.py
+test-tls13-ecdhe-curves.py
+test-tls13-empty-alert.py
+test-tls13-ffdhe-groups.py
+test-tls13-ffdhe-sanity.py
+test-tls13-finished-plaintext.py
+test-tls13-finished.py
+test-tls13-hrr.py
+test-tls13-invalid-ciphers.py
+test-tls13-keyshare-omitted.py
+test-tls13-keyupdate-from-server.py
+test-tls13-keyupdate.py
+test-tls13-large-number-of-extensions.py --supgroup
+test-tls13-legacy-version.py
+test-tls13-lengths.py -n 50
+test-tls13-multiple-ccs-messages.py
+test-tls13-nociphers.py
+test-tls13-non-support.py -e 'try negotiating TLS 1.3'
+test-tls13-pkcs-signature.py
+test-tls13-record-layer-limits.py
+test-tls13-record-padding.py
+test-tls13-rsa-signatures.py
+test-tls13-rsapss-signatures.py -b -e 'tls13 signature rsa_pss_pss_sha256' -e 'tls13 signature rsa_pss_pss_sha384' -e 'tls13 signature rsa_pss_pss_sha512'
+test-tls13-serverhello-random.py
+test-tls13-session-resumption.py -e 'sanity - TLS 1.2' -e 'use TLS 1.2 ticket in TLS 1.3'
+test-tls13-signature-algorithms.py -e 'empty list of signature methods'
+test-tls13-symetric-ciphers.py
+test-tls13-unencrypted-alert.py
+test-tls13-unrecognised-groups.py
+test-tls13-version-negotiation.py -e 'SSL 2.0 ClientHello with TLS 1.3 version and TLS 1.3 only ciphersuites' -e 'fallback from TLS 1.8 to 1.1' -e 'TLS 1.3 in client hello legacy field' -e 'TLS 1.8 in client hello legacy field'
+test-tls13-zero-content-type.py
+test-tls13-zero-length-data.py
+test-truncating-of-client-hello.py -e 'max pad: 16777167 of "0" byte padding'
+test-truncating-of-finished.py
+test-truncating-of-kRSA-client-key-exchange.py
+test-version-numbers.py -e 'high record version (3, 254), very high protocol version (254, 254)' -e 'high version (4, 1)' -e 'high version (6, 3)' -e 'very high version (254, 254)'
+test-x25519.py -x 'empty x448 key share' -X decode_error -x 'empty x25519 key share' -X decode_error -e 'default to P-256 when no groups specified' -e 'default to P-256/sha-1 when no extensions specified' -e 'only secp163k1 group - fallback to DHE' -e 'only unknown group - fallback to DHE'
+test-zero-length-data.py

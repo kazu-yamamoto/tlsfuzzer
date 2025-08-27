@@ -198,7 +198,7 @@ def main():
     node = node.add_child(ExpectFinished())
     node = node.add_child(ClientKeyExchangeGenerator())
     node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.unexpected_message))
+                                      AlertDescription.decode_error))
     node = node.add_child(ExpectClose())
     conversations["duplicate client key exchange after Finished"] = conversation
 

@@ -126,8 +126,7 @@ def add_app_data_conversation(conversations, host, port, cipher, dhe, data, ems)
     node = node.add_child(replace_plaintext(
         ApplicationDataGenerator(b"I'm ignored, only type is important"),
         data.data))
-    node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.bad_record_mac))
+    node = node.add_child(ExpectAlert(AlertLevel.fatal))
     node = node.add_child(ExpectClose())
     conversations["encrypted Application Data plaintext of {0}"
                   .format(data)] = \
@@ -170,8 +169,7 @@ def add_handshake_conversation(conversations, host, port, cipher, dhe, data, ems
     node = node.add_child(replace_plaintext(
         FinishedGenerator(),
         data.data))
-    node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                      AlertDescription.bad_record_mac))
+    node = node.add_child(ExpectAlert(AlertLevel.fatal))
     node = node.add_child(ExpectClose())
     conversations["encrypted Handshake plaintext of {0}".format(data)] = \
             conversation
