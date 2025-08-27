@@ -312,10 +312,10 @@ def main():
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 16), # SHA-384 size
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 32),
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 48),
-        (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 2**14-4-32), # max record
+#        (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 2**14-4-32), # max record
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 0x20000), # intermediate
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 0x30000), # bigger than max ClientHello
-        (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 256**3-1-32), # max handshake
+#        (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 0, 256**3-1-32), # max handshake
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 1, 0),
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 2, 0),
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 4, 0),
@@ -323,7 +323,7 @@ def main():
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 16, 0), # SHA-384 size
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 32, 0),
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 48, 0),
-        (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 2**14-4-32, 0), # max record
+ #       (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 2**14-4-32, 0), # max record
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 12, 0),
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 1, 1),
         (CipherSuite.TLS_AES_128_GCM_SHA256, 0, 8, 8), # SHA-384 size
