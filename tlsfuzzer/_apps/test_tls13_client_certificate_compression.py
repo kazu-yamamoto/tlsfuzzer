@@ -587,7 +587,7 @@ def main():
             uncompressed_message_size=size))
         node = node.add_child(CertificateVerifyGenerator(private_key))
         node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                          AlertDescription.bad_certificate))
+                                          AlertDescription.decode_error))
         node = node.add_child(ExpectClose())
         conversations["{0} uncompressed_size".format(name)] = conversation
 
@@ -699,7 +699,7 @@ def main():
         ))
         node = node.add_child(CertificateVerifyGenerator(private_key))
         node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                        AlertDescription.bad_certificate))
+                                        AlertDescription.decode_error))
         node = node.add_child(ExpectClose())
         test_title = "override actual algorithm used: {0} -> {1}".format(
             pair[0][0], pair[1][0])
@@ -766,7 +766,7 @@ def main():
         ))
         node = node.add_child(CertificateVerifyGenerator(private_key))
         node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                          AlertDescription.illegal_parameter))
+                                          AlertDescription.decode_error))
         node = node.add_child(ExpectClose())
         conversations["unsupported algorithm, {0}".format(algo)] = \
             conversation
@@ -911,7 +911,7 @@ def main():
                 uncompressed_message_size=2**12 - 1))
             node = node.add_child(CertificateVerifyGenerator(private_key))
             node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                              AlertDescription.bad_certificate))
+                                              AlertDescription.decode_error))
             node.next_sibling = ExpectClose()
             conversations["{0} bomb".format(alg_name)] = conversation
 
@@ -1060,7 +1060,7 @@ def main():
             uncompressed_message_size=2**12 - 1))
         node = node.add_child(CertificateVerifyGenerator(private_key))
         node = node.add_child(ExpectAlert(AlertLevel.fatal,
-                                          AlertDescription.bad_certificate))
+                                          AlertDescription.decode_error))
         node.next_sibling = ExpectClose()
         conversations["fuzzing of {0:,} bytes".format(size)] = \
             conversation
