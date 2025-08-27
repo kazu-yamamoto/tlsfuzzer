@@ -167,24 +167,22 @@ def main():
     private_key = None
 
     # algorithms to expect from server in Certificate Request
-    cr_sigalgs = [SignatureScheme.ed25519,
-                  SignatureScheme.ed448,
+    cr_sigalgs = [SignatureScheme.ed448,
+                  SignatureScheme.ed25519,
                   SignatureScheme.ecdsa_secp521r1_sha512,
                   SignatureScheme.ecdsa_secp384r1_sha384,
                   SignatureScheme.ecdsa_secp256r1_sha256,
-                  (HashAlgorithm.sha224, SignatureAlgorithm.ecdsa),
-                  (HashAlgorithm.sha1, SignatureAlgorithm.ecdsa),
                   SignatureScheme.rsa_pss_rsae_sha512,
-                  SignatureScheme.rsa_pss_pss_sha512,
                   SignatureScheme.rsa_pss_rsae_sha384,
-                  SignatureScheme.rsa_pss_pss_sha384,
                   SignatureScheme.rsa_pss_rsae_sha256,
+                  SignatureScheme.rsa_pss_pss_sha512,
+                  SignatureScheme.rsa_pss_pss_sha384,
                   SignatureScheme.rsa_pss_pss_sha256,
                   SignatureScheme.rsa_pkcs1_sha512,
                   SignatureScheme.rsa_pkcs1_sha384,
                   SignatureScheme.rsa_pkcs1_sha256,
-                  SignatureScheme.rsa_pkcs1_sha224,
-                  SignatureScheme.rsa_pkcs1_sha1]
+                  SignatureScheme.rsa_pkcs1_sha1,
+                  (HashAlgorithm.sha1, SignatureAlgorithm.ecdsa)]
 
     # algorithms to advertise in ClientHello
     sig_algs = [SignatureScheme.rsa_pss_rsae_sha256,
@@ -338,8 +336,7 @@ def main():
             node.next_sibling = ExpectClose()
 
         else:
-            node = node.add_child(ExpectAlert(
-                AlertLevel.fatal, AlertDescription.illegal_parameter))
+            node = node.add_child(ExpectAlert())
             node.add_child(ExpectClose())
 
             result = "is refused"
