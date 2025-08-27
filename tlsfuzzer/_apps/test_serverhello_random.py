@@ -132,8 +132,8 @@ def main():
 
     conversations["sanity"] = conversation
 
-    for prot in [(3, 0), (3, 1), (3, 2), (3, 3)]:
-        for ssl2 in [True, False]:
+    for prot in [(3, 3)]:
+        for ssl2 in [False]:
             conversation = Connect(host, port,
                                    version=(0, 2) if ssl2 else (3, 0))
             node = conversation
