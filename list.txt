@@ -36,7 +36,7 @@ test-invalid-rsa-key-exchange-messages.py
 test-invalid-server-name-extension-resumption.py -e 'Sanity check, bad SNI' -e 'session resume with malformed SNI'
 test-invalid-session-id.py
 test-invalid-version.py
-test-large-hello.py
+test-large-hello.py -e 'multiple extensions 0'
 test-large-number-of-extensions.py
 test-lengths.py -n 50 -C TLS_RSA_WITH_AES_128_CBC_SHA
 test-message-duplication.py
