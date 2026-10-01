@@ -1,0 +1,2 @@
+test-ecdsa-sig-flexibility.py -C TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 -x 'connect with sha224+ecdsa only' -X 'Alert(fatal, handshake_failure)'
+test-tls13-ecdsa-support.py -x 'Test with ecdsa_brainpoolP256r1tls13_sha256' -X 'Alert(fatal, handshake_failure)' -x 'Test with ecdsa_brainpoolP384r1tls13_sha384' -X 'Alert(fatal, handshake_failure)' -x 'Test with ecdsa_brainpoolP512r1tls13_sha512' -X 'Alert(fatal, handshake_failure)' -x 'Test with ecdsa_secp384r1_sha384' -X 'Alert(fatal, handshake_failure)' -x 'Test with ecdsa_secp521r1_sha512' -X 'Alert(fatal, handshake_failure)'
