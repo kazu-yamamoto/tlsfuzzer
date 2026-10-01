@@ -1,0 +1,124 @@
+test-TLSv1_2-rejected-without-TLSv1_2.py -e 'sanity - TLS 1.1 enabled' -x 'TLS_DHE_DSS_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_DSS_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_128_CCM in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_128_CCM_8 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_256_CCM in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_256_CCM_8 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DHE_RSA_WITH_CHACHA20_POLY1305_draft_00 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DH_ANON_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DH_ANON_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DH_ANON_WITH_AES_256_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DH_ANON_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DH_DSS_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_DH_DSS_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_128_CCM in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_256_CCM in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_draft_00 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_draft_00 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_128_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_128_CCM in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_128_CCM_8 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_128_GCM_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_256_CBC_SHA256 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_256_CCM in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_256_CCM_8 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_AES_256_GCM_SHA384 in TLSv1.1' -X 'received "protocol_version"' -x 'TLS_RSA_WITH_NULL_SHA256 in TLSv1.1' -X 'received "protocol_version"'
+test-aes-gcm-nonces.py
+test-alpn-negotiation.py
+test-atypical-padding.py -x '2^14 bytes of AppData with 256 bytes of padding (SHA1 + Encrypt then MAC)' -X 'did not send extension(s): encrypt_then_mac' -x 'sanity - encrypt then MAC' -X 'did not send extension(s): encrypt_then_mac'
+test-bleichenbacher-timing-pregenerate.py
+test-ccs.py
+test-chacha20.py -x 'Chacha20 in TLS1.1' -X 'received "protocol_version"'
+test-client-hello-max-size.py
+test-clienthello-md5.py
+test-connection-abort.py
+test-conversation.py
+test-cve-2004-0079.py
+test-cve-2016-2107.py
+test-cve-2016-6309.py
+test-cve-2016-7054.py
+test-dhe-no-shared-secret-padding.py -x 'Protocol (3, 0)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 0) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 1)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 2)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 3) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)'
+test-dhe-rsa-key-exchange-with-bad-messages.py
+test-dhe-rsa-key-exchange.py
+test-downgrade-protection.py -e 'TLS 1.3 downgrade check for Protocol (3, 1)' -e 'TLS 1.3 downgrade check for Protocol (3, 2)'
+test-early-application-data.py
+test-ecdhe-padded-shared-secret.py -x 'Protocol (3, 0)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 0) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 1) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 1) with secp256r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with secp384r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with secp521r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with x25519 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with x448 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 2) with secp256r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with secp384r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with secp521r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with x25519 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with x448 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 3) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)'
+test-ecdhe-rsa-key-exchange-with-bad-messages.py
+test-ecdhe-rsa-key-exchange.py -e 'ECDHE w/o extension'
+test-ecdhe-rsa-key-share-random.py -x 'Protocol (3, 0)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 0) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 1) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 1) with secp256r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with secp384r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with secp521r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with x25519 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) with x448 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 2) with secp256r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with secp384r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with secp521r1 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with x25519 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) with x448 group' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 3) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)'
+test-empty-extensions.py
+test-encrypt-then-mac.py -x 'Encrypt-then-MAC smoke test' -X 'did not send extension(s): encrypt_then_mac'
+test-export-ciphers-rejected.py --min-ver TLSv1.2
+test-extended-master-secret-extension.py -e 'extended master secret in TLSv1.1' -e 'sanity TLSv1.1'
+test-extensions.py
+test-fallback-scsv.py -x 'FALLBACK - hello TLSv1.1 - pos 0' -X 'received "protocol_version"' -x 'FALLBACK - hello TLSv1.1 - pos 1' -X 'received "protocol_version"' -x 'FALLBACK - hello TLSv1.1 - pos 2' -X 'received "protocol_version"' -x 'FALLBACK - record TLSv1.1 hello TLSv1.1 - pos 0' -X 'received "protocol_version"' -x 'FALLBACK - record TLSv1.1 hello TLSv1.1 - pos 1' -X 'received "protocol_version"' -x 'FALLBACK - record TLSv1.1 hello TLSv1.1 - pos 2' -X 'received "protocol_version"' -x 'record TLSv1.1 hello TLSv1.1' -X 'Alert(fatal, protocol_version)' -x 'sanity - TLSv1.1' -X 'Alert(fatal, protocol_version)'
+test-ffdhe-expected-params.py
+test-ffdhe-negotiation.py -e 'fallback to non-ffdhe' -e 'fallback to non-ffdhe with secp256r1 advertised' -e 'no overlap between groups'
+test-fuzzed-MAC.py
+test-fuzzed-ciphertext.py
+test-fuzzed-finished.py
+test-fuzzed-padding.py
+test-fuzzed-plaintext.py
+test-hello-request-by-client.py
+test-interleaved-CKE-with-CCS.py
+test-interleaved-application-data-and-fragmented-handshakes-in-renegotiation.py -e 'Application data inside Client Key Exchange'
+test-interleaved-application-data-in-renegotiation.py -e 'Application data before Change Cipher Spec' -e 'Application data before Client Key Exchange'
+test-invalid-cipher-suites.py
+test-invalid-client-hello-w-record-overflow.py -x 'cipher suites len fuzz to 12 w/ext' -X 'received "illegal_parameter"' -x 'session ID len fuzz to 5 w/ext' -X 'received "handshake_failure"'
+test-invalid-client-hello.py -x 'cipher suites len fuzz to 12 w/ext' -X 'received "illegal_parameter"' -x 'session ID len fuzz to 5 w/ext' -X 'received "handshake_failure"'
+test-invalid-compression-methods.py
+test-invalid-content-type.py
+test-invalid-rsa-key-exchange-messages.py
+test-invalid-server-name-extension-resumption.py --sni localhost -x 'session resume with different SNI' -X 'Alert(fatal, unrecognized_name)'
+test-invalid-server-name-extension.py --sni-fatal
+test-invalid-session-id.py
+test-invalid-version.py
+test-large-hello.py
+test-large-number-of-extensions.py
+test-legacy-renegotiation.py
+test-lengths.py -n 50
+test-lucky13.py
+test-message-duplication.py
+test-message-skipping.py
+test-no-heartbeat.py
+test-no-mlkem-in-old-tls.py
+test-openssl-3712.py -e 'weaved app data and handshake proto'
+test-point-extension.py
+test-record-layer-fragmentation.py -e 'big, excessive fragmentation: 20 fragment - 4096B extension' -e 'medium, excessive fragmentation: 20 fragment - 1024B extension' -e 'medium, maximum fragmentation: 1 fragment - 1024B extension' -e 'small, maximum fragmentation: 1 fragment - 20B extension'
+test-record-size-limit.py --reply-AD-size 103 --supported-groups --hrr-supported-groups -e 'added extension in 2nd CH in HRR handshake' -e 'check interaction with sha256 prf' -e 'modified extension in 2nd CH in HRR handshake' -e 'removed extension in 2nd CH in HRR handshake' -e 'renegotiation with dropped extension' -x 'check if server accepts maximum size in TLS 1.0' -X 'Alert(fatal, protocol_version)' -x 'check if server accepts maximum size in TLS 1.1' -X 'Alert(fatal, protocol_version)' -x 'check if server accepts minimal size in TLS 1.0' -X 'Alert(fatal, protocol_version)' -x 'check if server accepts minimal size in TLS 1.1' -X 'Alert(fatal, protocol_version)' -x 'check server sent size in TLS 1.0' -X 'Alert(fatal, protocol_version)' -x 'check server sent size in TLS 1.0 with max_fragment_length' -X 'Alert(fatal, protocol_version)' -x 'check server sent size in TLS 1.1' -X 'Alert(fatal, protocol_version)' -x 'check server sent size in TLS 1.1 with max_fragment_length' -X 'Alert(fatal, protocol_version)'
+test-renegotiation-changed-clienthello.py -e 'drop extended_master_secret in renegotiation'
+test-resumption-with-wrong-ciphers.py
+test-serverhello-random.py -x 'Protocol (3, 0)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 0) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 1)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 1) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 2)' -X 'Alert(fatal, protocol_version)' -x 'Protocol (3, 2) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)' -x 'Protocol (3, 3) in SSLv2 compatible ClientHello' -X 'Alert(fatal, unexpected_message)'
+test-session-ticket-resumption.py --no-new-ticket-on-resumption
+test-sessionID-resumption.py
+test-sig-algs-renegotiation-resumption.py --ems --sig-algs-drop-ok
+test-sig-algs.py -e 'rsa_pss_pss_sha256 only' -e 'rsa_pss_pss_sha384 only' -e 'rsa_pss_pss_sha512 only'
+test-signature-algorithms.py
+test-sslv2-connection.py
+test-sslv2-force-cipher-3des.py
+test-sslv2-force-cipher-non3des.py
+test-sslv2-force-cipher.py
+test-sslv2-force-export-cipher.py
+test-sslv2hello-protocol.py -x 'SSLv2 Client Hello' -X 'Alert(fatal, unexpected_message)'
+test-tls13-0rtt-garbage.py -e 'undecryptable record later in handshake together with early_data'
+test-tls13-ccs.py
+test-tls13-certificate-compression.py
+test-tls13-connection-abort.py -e 'After NewSessionTicket'
+test-tls13-conversation.py
+test-tls13-count-tickets.py -t 1
+test-tls13-crfg-curves.py
+test-tls13-dhe-shared-secret-padding.py
+test-tls13-ecdhe-curves.py
+test-tls13-empty-alert.py
+test-tls13-ffdhe-groups.py
+test-tls13-ffdhe-sanity.py
+test-tls13-finished-plaintext.py
+test-tls13-finished.py -x 'padding - cipher TLS_AES_128_GCM_SHA256, pad_byte 0, pad_left 0, pad_right 16777183' -X 'Alert(fatal, decode_error)' -x 'padding - cipher TLS_AES_256_GCM_SHA384, pad_byte 0, pad_left 0, pad_right 16777167' -X 'Alert(fatal, decode_error)'
+test-tls13-hrr.py
+test-tls13-invalid-ciphers.py
+test-tls13-keyshare-omitted.py
+test-tls13-keyupdate-from-server.py
+test-tls13-keyupdate.py
+test-tls13-large-number-of-extensions.py --supgroup --exc 27
+test-tls13-legacy-version.py
+test-tls13-lengths.py -n 50
+test-tls13-mlkem.py
+test-tls13-multiple-ccs-messages.py
+test-tls13-nociphers.py
+test-tls13-non-support.py -e 'try negotiating TLS 1.3'
+test-tls13-pkcs-signature.py
+test-tls13-record-layer-limits.py
+test-tls13-record-padding.py
+test-tls13-rsa-signatures.py
+test-tls13-rsapss-signatures.py -b -e 'tls13 signature rsa_pss_pss_sha256' -e 'tls13 signature rsa_pss_pss_sha384' -e 'tls13 signature rsa_pss_pss_sha512'
+test-tls13-serverhello-random.py
+test-tls13-session-resumption.py -e 'session resumption - PSK_ONLY'
+test-tls13-signature-algorithms.py
+test-tls13-symetric-ciphers.py
+test-tls13-unencrypted-alert.py
+test-tls13-unrecognised-groups.py
+test-tls13-version-negotiation.py -x 'fallback from TLS 1.8 to 1.1' -X 'Alert(fatal, protocol_version)'
+test-tls13-zero-content-type.py
+test-tls13-zero-length-data.py
+test-truncating-of-client-hello.py
+test-truncating-of-finished.py
+test-truncating-of-kRSA-client-key-exchange.py
+test-version-numbers.py
+test-x25519.py -e 'default to P-256 when no groups specified' -e 'default to P-256/sha-1 when no extensions specified'
+test-zero-length-data.py

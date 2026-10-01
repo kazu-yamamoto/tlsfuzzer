@@ -1,0 +1,11 @@
+test-certificate-malformed.py -e 'fuzz empty certificate - overall 8, certs 5, cert 2' -e 'fuzz empty certificate - overall 7, certs 4, cert 1'
+test-certificate-request.py -T 'ecdsa_sign rsa_sign' -s 'ed448 ed25519 ecdsa_secp521r1_sha512 ecdsa_secp384r1_sha384 ecdsa_secp256r1_sha256 rsa_pss_rsae_sha512 rsa_pss_rsae_sha384 rsa_pss_rsae_sha256 rsa_pss_pss_sha512 rsa_pss_pss_sha384 rsa_pss_pss_sha256 rsa_pkcs1_sha512 rsa_pkcs1_sha384 rsa_pkcs1_sha256 rsa_pkcs1_sha1 sha1+ecdsa'
+test-certificate-verify-malformed-sig.py
+test-certificate-verify-malformed.py
+test-certificate-verify.py
+test-extended-master-secret-extension-with-client-cert.py
+test-rsa-pss-sigs-on-certificate-verify.py
+test-rsa-sigs-on-certificate-verify.py
+test-tls13-certificate-request.py -E "compress_certificate:CR key_share:SH supported_versions:SH supported_groups:EE" -s 'ed448 ed25519 ecdsa_secp521r1_sha512 ecdsa_secp384r1_sha384 ecdsa_secp256r1_sha256 rsa_pss_rsae_sha512 rsa_pss_rsae_sha384 rsa_pss_rsae_sha256 rsa_pss_pss_sha512 rsa_pss_pss_sha384 rsa_pss_pss_sha256 rsa_pkcs1_sha512 rsa_pkcs1_sha384 rsa_pkcs1_sha256 rsa_pkcs1_sha1 sha1+ecdsa'
+test-tls13-certificate-verify.py -s 'ed448 ed25519 ecdsa_secp521r1_sha512 ecdsa_secp384r1_sha384 ecdsa_secp256r1_sha256 rsa_pss_rsae_sha512 rsa_pss_rsae_sha384 rsa_pss_rsae_sha256 rsa_pss_pss_sha512 rsa_pss_pss_sha384 rsa_pss_pss_sha256 rsa_pkcs1_sha512 rsa_pkcs1_sha384 rsa_pkcs1_sha256 rsa_pkcs1_sha1 sha1+ecdsa'
+test-tls13-client-certificate-compression.py --random-fuzz-size 0 --algorithms=zlib

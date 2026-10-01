@@ -1,0 +1,2 @@
+test-eddsa-in-certificate-verify.py
+test-tls13-eddsa-in-certificate-verify.py -s 'ed448 ed25519 ecdsa_secp521r1_sha512 ecdsa_secp384r1_sha384 ecdsa_secp256r1_sha256 rsa_pss_rsae_sha512 rsa_pss_rsae_sha384 rsa_pss_rsae_sha256 rsa_pss_pss_sha512 rsa_pss_pss_sha384 rsa_pss_pss_sha256 rsa_pkcs1_sha512 rsa_pkcs1_sha384 rsa_pkcs1_sha256 rsa_pkcs1_sha1 sha1+ecdsa'
